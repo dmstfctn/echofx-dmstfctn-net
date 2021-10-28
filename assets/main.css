@@ -161,3 +161,38 @@ html, body{
             width: auto;
         }
     }
+
+
+.efx-press{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+    .efx-press section{
+        font-size: 1.25rem;        
+        margin-bottom: 4rem;
+        width: calc(33.33% - 4rem);
+    }
+    .efx-press section img{
+        width: 100%;
+        height: auto;
+    }
+    .efx-press section p,
+    .efx-press section ul,
+    .efx-press section h3,
+    .efx-press section h4{
+        margin-top: 0;
+    }
+    .efx-press section h3{
+        font-size: 1em;
+    }
+    .efx-press section h4{
+        font-weight: normal;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+    .efx-press section ul{
+        list-style: none;
+        padding: 0;
+    }
