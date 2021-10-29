@@ -2,7 +2,7 @@
 //outline: 1px solid lime;
 }
 :root{
-    --bg: rgb(10,11,11);
+    --bg: rgb(0,0,0);
     --fg: rgb(225,38,29);
     --colgap: 2.4rem;
 }
@@ -169,7 +169,7 @@ html, body{
     }
 
 .efx-press-header{
-    background-image: url('images/press-header.jpg');
+    background-image: url('images/press-header-2000.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,8 +178,14 @@ html, body{
 }
     @media (min-width: 720px){
         .efx-press-header{
-            height: 75vh;
+            height: 100%;
+            max-height: 75vh;
             margin-bottom: 4rem;
+        }
+    }
+    @media (min-width: 1920px){
+        .efx-press-header{
+            background-image: url('images/press-header-4000.jpg');
         }
     }
 
@@ -297,5 +303,11 @@ html, body{
         }
         .efx-press .efx-press-stretch img{
             width: 100%;            
+        }
+    }
+
+    @media (min-width: 1920px){
+        .efx-press section{
+            margin-bottom: 12rem;
         }
     }
