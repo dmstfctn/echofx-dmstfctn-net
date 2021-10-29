@@ -26,6 +26,11 @@ html, body{
             padding: 2.5rem;
         }
     }
+    @media (min-width: 1920px){
+        html{
+            font-size: 0.7vw;
+        }
+    }
     a{
         color: var(--fg);
         text-decoration: none;
