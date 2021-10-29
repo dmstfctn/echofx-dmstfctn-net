@@ -4,6 +4,7 @@
 :root{
     --bg: rgb(10,11,11);
     --fg: rgb(225,38,29);
+    --colgap: 2.4rem;
 }
 
 html, body{
@@ -183,10 +184,10 @@ html, body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-    line-height: 1.2;
+    line-height: 1.23;
+    font-size: 1.25rem;
 }
-    .efx-press section{
-        font-size: 1.25rem;        
+    .efx-press section{            
         margin-bottom: 2rem;        
     }
     .efx-press section img{
@@ -233,7 +234,7 @@ html, body{
             margin-bottom: 0;
         }
         .efx-press section{
-            width: calc(50% - 2rem);
+            width: calc(50% - var(--colgap));
         }       
         .efx-press .efx-press-images{
             width: 100%;
@@ -247,10 +248,10 @@ html, body{
             align-items: flex-start;
         }
         .efx-press .efx-press-stretch>div{
-            width: calc(50% - 2rem);
+            width: calc(50% - var(--colgap));
         }
         .efx-press .efx-press-stretch img{
-            width: calc( 50% - 2rem);
+            width: calc( 50% - var(--colgap));
             height: auto;
             display: block;
         }
@@ -258,10 +259,10 @@ html, body{
 
     @media (min-width: 1100px){
         .efx-press section{
-            width: calc(33.33% - 2rem);
+            width: calc(33.33% - var(--colgap));
         }    
         .efx-press .efx-press-col{
-            column-gap: 2rem;
+            column-gap: calc(var(--colgap) * 2);
         }
         .efx-press .efx-press-col p,
         .efx-press .efx-press-col .col-grp{
@@ -273,7 +274,7 @@ html, body{
             columns: 3;
         }
         .efx-press .efx-press-col_2{
-            width: calc(66.66% - 2rem);
+            width: calc(66.66% - var(--colgap));
             columns: 2;
         }
         .efx-press .efx-press-col_2 h3{
@@ -283,7 +284,7 @@ html, body{
             width: 100%;
         }
         .efx-press .efx-press-stretch{
-            width: calc(33.33% - 2rem);
+            width: calc(33.33% - var(--colgap));
             flex-direction: column;
         }
         .efx-press .efx-press-stretch > div{
