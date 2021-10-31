@@ -21,16 +21,7 @@ html, body{
         box-sizing: border-box;
         padding: 1rem;
     }
-    @media (min-width: 720px) {
-        body{
-            padding: 2.5rem;
-        }
-    }
-    @media (min-width: 1920px){
-        html{
-            font-size: 0.7vw;
-        }
-    }
+   
     a{
         color: var(--fg);
         text-decoration: none;
@@ -168,27 +159,59 @@ html, body{
         }
     }
 
-.efx-press-header{
-    background-image: url('images/press-header-2000.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50vh;
-    margin-bottom: 2rem;
+
+html.press body {
+    max-width: 71rem;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
-    @media (min-width: 720px){
-        .efx-press-header{
-            height: 100%;
-            max-height: 75vh;
-            margin-bottom: 4rem;
+html.press a{
+    text-decoration: underline;
+}
+
+    @media (min-width: 720px) {
+        html.press body {
+            padding: 2.5rem;
         }
     }
     @media (min-width: 1920px){
-        .efx-press-header{
-            background-image: url('images/press-header-4000.jpg');
+        html.press{
+            font-size: 0.7vw;
         }
     }
 
+
+.efx-press-header{    
+    height: 50vh;
+    margin-bottom: 2rem; 
+    position: relative;
+    z-index: 1;  
+}
+    .efx-press-image{
+        height: 50vh;
+        width: 120vw;
+        background-image: url('images/press-header-2000.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: -10vw;
+        z-index: 0;
+    }
+    @media (min-width: 720px){
+        .efx-press-header{
+            height: 75vh;            
+        }
+        .efx-press-image{
+            height: 75vh;
+        }
+    }
+    @media (min-width: 1920px){
+        .efx-press-image{
+            background-image: url('images/press-header-4000.jpg');
+        }
+    }
 
 .efx-press{
     display: flex;
@@ -197,6 +220,16 @@ html, body{
     align-items: stretch;
     line-height: 1.23;
     font-size: 1.25rem;
+}
+
+.efx-press-meta{
+    font-size: 1.05rem;
+}
+@media (max-width: 720px){
+    .efx-press-meta .efx-press-contents{
+        font-size: 1.25rem;
+        margin-top: 4rem;
+    }
 }
     .efx-press section{            
         margin-bottom: 2rem;        
@@ -270,7 +303,7 @@ html, body{
 
     @media (min-width: 1100px){
         .efx-press section{
-            width: calc(33.33% - var(--colgap));
+            width: calc(50% - var(--colgap));
         }    
         .efx-press .efx-press-col{
             column-gap: calc(var(--colgap) * 2);
