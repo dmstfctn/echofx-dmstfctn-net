@@ -187,6 +187,9 @@ html.press a{
     position: relative;
     z-index: 1;  
 }
+html.press .efx-press-header a{
+    text-decoration: none;
+}
     .efx-press-image{
         height: 50vh;
         width: 120vw;
@@ -199,6 +202,7 @@ html.press a{
         left: -10vw;
         z-index: 0;
     }
+    
     @media (min-width: 720px){
         .efx-press-header{
             height: 75vh;            
@@ -223,8 +227,13 @@ html.press a{
 }
 
 .efx-press-meta{
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
+
+.efx-press-contriblist{
+    max-width: 27em;
+}
+
 @media (max-width: 720px){
     .efx-press-meta .efx-press-contents{
         font-size: 1.25rem;
