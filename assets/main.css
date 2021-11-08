@@ -180,6 +180,10 @@ html.press a{
         }
     }
 
+.efx-press-wrap{
+    overflow: hidden;
+    width: 100%;
+}
 
 .efx-press-header{    
     height: 50vh;
