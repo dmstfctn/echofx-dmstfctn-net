@@ -185,8 +185,7 @@ html.press a{
     width: 100%;
 }
 
-.efx-press-header{    
-    height: 50vh;
+.efx-press-header{       
     margin-bottom: 2rem; 
     position: relative;
     z-index: 1;  
@@ -195,30 +194,28 @@ html.press .efx-press-header a{
     text-decoration: none;
 }
     .efx-press-image{
-        height: 50vh;
-        width: 120vw;
-        background-image: url('images/press-header-2000.jpg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 0;
-        left: -10vw;
-        z-index: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+   
+    .efx-press-image img{
+        width: calc(50% - calc( var(--colgap) / 4 ));
+        margin-bottom: calc( var(--colgap) / 2 );
     }
     
     @media (min-width: 720px){
         .efx-press-header{
-            height: 75vh;            
+                    
         }
-        .efx-press-image{
-            height: 75vh;
+        .efx-press-image img{
+            width: calc(50% - calc( var(--colgap) / 2 ));
+            margin-bottom: var(--colgap);
         }
     }
     @media (min-width: 1920px){
-        .efx-press-image{
-            background-image: url('images/press-header-4000.jpg');
-        }
+      
     }
 
 .efx-press{
