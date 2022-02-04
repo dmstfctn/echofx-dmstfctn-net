@@ -198,6 +198,7 @@ html.press .efx-press-header a{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: stretch;
+        margin-bottom: calc( var(--colgap) / 4 );
     }
    
     .efx-press-image img{
